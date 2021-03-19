@@ -4,29 +4,22 @@
 }
 .App {
   text-align: center;
-  margin-top: -2rem;
 }
 
 .App-header {
   background-color: #282c34;
+  min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-nav {
-    display: flex;
-    width: 30%;
-    justify-content: space-between;
-    margin: 0 35%; 
-    position: relative;
+.btn {
+    width: 15%;
+    margin: 1rem 2rem 4rem 0;
+    color: aliceblue;
 }
+
 h1 {
-  padding: 3rem 0 2rem;
-
-}
-
-.message {
-  width: 20%;
-  margin: 0 20%;
+  padding: 2rem 0 2rem;
 }
 
 form {
@@ -37,6 +30,7 @@ form {
   flex-direction: column;
   justify-content: center;
   color: white;
+  position: relative;
 }
 
 label {
@@ -71,5 +65,16 @@ button {
 
 button:hover {
   border: 1px solid  hsl(280, 87%, 65%); 
-  color:  hsl(280, 87%, 65%);
+  color: white;
+}
+
+p {
+    color: white;
+    padding-top: 9rem;
+    position: absolute;
+}
+
+.spinner {
+    position: absolute;
+    margin: 5.5rem 0 0 28rem;
 }
