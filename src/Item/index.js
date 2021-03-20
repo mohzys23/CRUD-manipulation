@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import "./item.css";
+import "./item.scss";
 import axios from "axios";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Nav from '../Nav/index';
 
 function Item() {
 
@@ -45,12 +46,12 @@ function Item() {
     e.preventDefault();
     const url = new URL("https://test.anchoratechs.com/items");
 
-    let params = {
-      category: "104",
-    };
-    Object.keys(params).forEach((key) =>
-      url.searchParams.append(key, params[key])
-    );
+    // let params = {
+    //   category: category,
+    // };
+    // Object.keys(params).forEach((key) =>
+    //   url.searchParams.append(key, params[key])
+    // );
 
     let body = {
       id: id,
@@ -58,7 +59,7 @@ function Item() {
       price: price,
       image: image,
       description: description,
-      category: "104",
+      category: category
     };
 
     axios.post(`${url}`, body).then((res, err) => {
@@ -75,13 +76,6 @@ function Item() {
   function handleUpdate(e) {
     e.preventDefault();
     const url = new URL(`https://test.anchoratechs.com/items/${id}`);
-
-    let params = {
-      category: category,
-    };
-    Object.keys(params).forEach((key) =>
-      url.searchParams.append(key, params[key])
-    );
 
     let body = {
       id: id,
@@ -107,10 +101,6 @@ function Item() {
     e.preventDefault();
     const url = new URL(`https://test.anchoratechs.com/items/${id}`);
 
-    //   const body = {
-    //     id: id,
-    //   };
-
     axios.delete(`${url}`).then((res, err) => {
       if (!err) {
         setLoading(false);
@@ -123,8 +113,9 @@ function Item() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="container">
+      <Nav />
+      <header className="wrapper">
         <h1>Items</h1>
         <button
           className="btn"
@@ -194,13 +185,13 @@ function Item() {
               onChange={(e) => setDescription(e.target.value)}
             />
             <br />
-            {/* <input
+            <input
               type="text"
-              placeholder="Enter item category name"
+              placeholder="Enter item category number"
               name="cartegory"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-            /> */}
+            />
             <button type="submit" onClick={handleLoading}>
               Submit
             </button>
@@ -225,7 +216,7 @@ function Item() {
             <br />
             <input
               type="text"
-              placeholder="Enter item title"
+              placeholder="Update item title"
               name="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
@@ -233,7 +224,7 @@ function Item() {
             <br />
             <input
               type="number"
-              placeholder="Enter item name"
+              placeholder="Update item name"
               name="price"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
@@ -241,15 +232,14 @@ function Item() {
             <br />
             <input
               type="file"
-              placeholder="Enter item name"
+              placeholder="Update item name"
               name="image"
-              value={image}
               onChange={(e) => setImage(e.target.value)}
             />
             <br />
             <input
               type="text"
-              placeholder="Enter item dexscription"
+              placeholder="Update item dexscription"
               name="discription"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -257,7 +247,7 @@ function Item() {
             <br />
             <input
               type="text"
-              placeholder="Enter item category name"
+              placeholder="Enter item category number"
               name="cartegory"
               value={category}
               onChange={(e) => setCategory(e.target.value)}

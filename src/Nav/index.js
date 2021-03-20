@@ -1,23 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './nav.css';
+import './nav.scss';
 
 export default function Nav() {
     return (
-        <div className="App">
-    
-          <nav>
-            <Link to="/category">
-              <h4>Category</h4>
-            </Link>
-            <Link to="/item">
-              <h4>Item</h4>
-            </Link>
-            <Link to="/upload">
-              <h4>Upload</h4>
-            </Link>
-          </nav>
-          
-          </div>
-    )
+      <div className="container">
+        <nav>
+          <Link to="/category">
+            <button>Category</button>
+            
+          </Link>
+          <Link to="/item">
+            <button>Item</button>
+          </Link>
+          <Link to="/upload">
+            <button>Upload</button>
+          </Link>
+        </nav>
+      </div>
+    );
 }
