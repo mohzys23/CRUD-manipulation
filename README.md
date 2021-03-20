@@ -1,10 +1,22 @@
+## Usage
+
+
+![crud-1](https://user-images.githubusercontent.com/39748749/111858283-9fa83000-892f-11eb-981a-7db778840c6e.gif)
+
+![crud-2](https://user-images.githubusercontent.com/39748749/111858310-de3dea80-892f-11eb-84db-47729866012c.gif)
+
+![crud-3](https://user-images.githubusercontent.com/39748749/111858344-147b6a00-8930-11eb-8553-9f649f7c73c2.gif)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+
 
 ### `npm start`
 
@@ -30,6 +42,7 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
+![crud-4](https://user-images.githubusercontent.com/39748749/111858387-79cf5b00-8930-11eb-9506-5cb08cf19b36.gif)
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
