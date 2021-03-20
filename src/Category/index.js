@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
-import "./category.css";
+import "./category.scss";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Nav from '../Nav/index';
 
 
 
@@ -117,8 +118,9 @@ function handleDelete(e) {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="container">
+   <Nav /> 
+      <header className="wrapper">
         <h1>Categories</h1>
         <button
           className="btn"

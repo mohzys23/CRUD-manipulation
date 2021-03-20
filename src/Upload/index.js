@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import "./upload.css";
+import "./upload.scss";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Nav from '../Nav/index';
+
 
 function Upload() {
   // upload
@@ -42,8 +44,9 @@ function Upload() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="container">
+      <Nav />
+      <header className="wrapper">
         <h1>File upload</h1>
         <form onSubmit={handleSubmit}>
           <label>Please upload a file</label>

@@ -1,0 +1,27 @@
+.container {
+  margin: 0;
+  padding: 0;
+
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-top: -3rem;
+
+    button {
+      padding: 0;
+      border: none;
+      margin: 1rem 1.5rem 3rem;
+      color: aliceblue;
+      outline: none;
+      font-size: 1rem;
+    }
+    button:hover {
+      color: aquamarine;
+      text-decoration: underline;
+    }
+    button:focus {
+      color: rgb(112, 201, 171);
+      text-decoration: underline;
+    }
+  }
+}
